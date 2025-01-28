@@ -17,5 +17,36 @@
     },
     "devDependencies": {
         "tsup": "^8.3.5"
+    },
+    "agentConfig": {
+        "pluginType": "elizaos:client:1.0.0",
+        "pluginParameters": {
+            "OPACITY_TEAM_ID": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Opacity team identifier"
+            },
+            "OPACITY_CLOUDFLARE_NAME": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Cloudflare worker name for Opacity"
+            },
+            "OPACITY_PROVER_URL": {
+                "type": "string",
+                "minLength": 1,
+                "description": "URL for the Opacity prover service"
+            },
+            "VERIFIABLE_INFERENCE_ENABLED": {
+                "type": "boolean",
+                "default": true,
+                "description": "Enable/disable verifiable inference"
+            },
+            "VERIFIABLE_INFERENCE_PROVIDER": {
+                "type": "string",
+                "enum": ["opacity"],
+                "default": "opacity",
+                "description": "Provider for verifiable inference"
+            }
+        }
     }
 }
