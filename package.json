@@ -1,5 +1,5 @@
 {
-    "name": "@elizaos/plugin-opacity",
+    "name": "@elizaos-plugins/plugin-opacity",
     "version": "0.1.8+build.1",
     "description": "Opacity Protocol adapter for ElizaOS",
     "main": "dist/index.js",
@@ -43,7 +43,9 @@
             },
             "VERIFIABLE_INFERENCE_PROVIDER": {
                 "type": "string",
-                "enum": ["opacity"],
+                "enum": [
+                    "opacity"
+                ],
                 "default": "opacity",
                 "description": "Provider for verifiable inference"
             }
