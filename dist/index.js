@@ -7,7 +7,7 @@ import {
 } from "@elizaos/core";
 
 // src/utils/api.ts
-async function verifyProof(baseUrl, textID, proof) {
+async function verifyProof(baseUrl, _textID, proof) {
   const response = await fetch(`${baseUrl}/api/verify`, {
     headers: {
       "Content-Type": "application/json"
@@ -38,7 +38,6 @@ var OpacityAdapter = class {
     });
     let endpoint;
     let authHeader;
-    let responseRegex;
     switch (provider) {
       case ModelProviderName.OPENAI:
         endpoint = `${baseEndpoint}/openai/chat/completions`;
@@ -85,7 +84,7 @@ var OpacityAdapter = class {
       });
       try {
         JSON.parse(requestBody);
-      } catch (e) {
+      } catch {
         elizaLogger.error("Invalid JSON body:", body);
         throw new Error("Failed to create valid JSON request body");
       }
