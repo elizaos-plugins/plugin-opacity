@@ -1,3 +1,5 @@
+# Unmaintained: this verifiable inference plugin needs to be ported
+
 # @elizaos/adapter-opacity
 
 This adapter integrates Opacity proofs into ElizaOS, enabling verifiable inference results from various AI model providers available through the [CloudFlare AI Gateway](https://developers.cloudflare.com/ai-gateway). It implements the `IVerifiableInferenceAdapter` interface, making it compatible with other verifiable inference solutions.
